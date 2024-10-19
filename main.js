@@ -12,19 +12,21 @@ function play(){
         alert("Hãy chọn 1 số từ 0 đến 99.");
     }
     else{
-        if(--no_of_guesses == 0){
-            msg1.textContent = "Số của tôi là " + answer;
-            msg2.textContent = "Số lượt chơi còn lại :" + no_of_guesses;
+        guesses_nums.push(user_guess);
+        --no_of_guesses;
+        if(no_of_guesses == 0){
+            msg1.textContent = `Số của tôi là ${answer}`;
+            msg1.style.fontSize = "24px";
+            msg2.textContent = "Số lượt chơi còn lại : " + no_of_guesses;
             msg3.textContent = "Số đã đoán : " + guesses_nums;
             setTimeout(() => {
-                alert("Bạn đã thua !!!");
+                alert("Bạn quá non :))");
                 location.reload();
-            }, 1500);
+            }, 2000);
         }
-        guesses_nums.push(user_guess);
-        if(user_guess > answer){
+        else if(user_guess > answer){
             msg1.textContent = "Giảm bớt đê 🤣";
-            msg2.textContent = "Số lượt chơi còn lại :" + no_of_guesses;
+            msg2.textContent = "Số lượt chơi còn lại : " + no_of_guesses;
             msg3.textContent = "Số đã đoán : " + guesses_nums;
         }
         else if(user_guess < answer){
@@ -32,15 +34,17 @@ function play(){
             msg2.textContent = "Số lượt chơi còn lại :" + no_of_guesses;
             msg3.textContent = "Số đã đoán : " + guesses_nums;
         }
-        else{
-            msg1.textContent = "Bạn quá đỉnh !!!";
-            msg2.textContent = "Số lượt chơi còn lại :" + no_of_guesses;
+        else if(user_guess == answer){
+            msg1.textContent = `Số của tôi là ${answer}`;
+            msg1.style.fontSize = "24px";
+            msg2.textContent = "Số lượt chơi còn lại : " + no_of_guesses;
             msg3.textContent = "Số đã đoán : " + guesses_nums;
             setTimeout(() => {
                 alert("Chúc mừng bạn đã thắng !!!");
                 location.reload();
-            }, 1500);
-            
+            }, 2000);
         }
+        
+
     }
 }   
