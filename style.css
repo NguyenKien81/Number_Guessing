@@ -8,11 +8,6 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(
-        to right,
-        #7f53ac,
-        #657ced
-    );
 }
 .container{
     position: absolute;
@@ -21,7 +16,6 @@ body {
     display: grid;
     justify-items: center;
     font-family: 'Poppins', sans-serif;
-    border-radius: 50px;
 }
 h3{
     font-size: 16px;
@@ -34,7 +28,6 @@ input[type="number"]{
     align-items: center;
     width: 180px;
     font-weight: 600;
-    color : #663399;
     padding : 20px 0;
     text-align: center;
     margin-top: 15px;
@@ -76,15 +69,49 @@ p{
     margin-top: 5px;
 }
 @media screen and (max-width : 1500px){
+    body{
+        background: linear-gradient(
+        to right,
+        #ff6fa5,
+        #fb9ec4,
+        #ffdac0,
+        #ffc7ba
+    );
+    }
     .container{
         width: 50%;
         min-width: 580px;
         transform: translate(-50%, 50%);
         left: 50%;
+        border-radius: 50px;
     }
+    input[type="number"]{
+        color : #8865ff;
+    }
+    button{
+        background-color: #8865ff;
+    }
+
 }
 @media screen and (max-width : 750px) {
+    body{
+        background: linear-gradient(
+        to right,
+        #044855,
+        #793F4E,
+        #c0424e,
+        #d94b38
+    );
+    }
     .container{
-        width: 100vh;
+        width: 100%;
+        border-radius: none;
+    }
+    input[type="number"]{
+        color : #022e39;
+    }
+    button{
+        background-color: #022e39;
     }
 }
+
