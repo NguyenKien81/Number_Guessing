@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3>Tôi sẽ lựa chọn 1 số bất kì từ 0 đến 99</h3>
+        <h3>Bạn có thể đoán con số đó chứ ?</h3>
+
+        <input type="number" placeholder="Your number" id="guess"><br>
+        <button onclick="play()" id="mt_btn">GUESS</button>
+
+        <p class = "msg" id="message1">Số lượt chơi còn lại : 6</p>
+        <p class = "msg" id="message2">Số đã đoán : Không có</p>
+        <p class = "msg" id="message3"></p>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
